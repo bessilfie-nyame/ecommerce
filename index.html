@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Product</title>
+		<link rel="stylesheet" type="text/css" href="./src/styles.css">
+	</head>
+	<body>
+		<header>
+			<nav></nav>
+			<a href="./cart.html" class="cart">
+				🛒 <span id="cart-count">0</span>
+			</a>
+		</header>
+		<main class="product prod-details-wrap">
+			<div class="product-img-wrapper">
+				<div class="product-img"></div>
+			</div>
+			<div class="product-details-wrapper">
+				<h1 data-var="name" class="primary--text"></h1>
+				<span class="desc" data-var="description"></span>
+				<h2 class="price primary--text">
+					<span data-var="price.currency"></span>
+					<span data-var="price.amount"></span>
+				</h2>
+
+
+				<div class="color-picker">
+					<span  class="cl template"></span>
+				</div>
+				<div class="info primary-cl">Color: <span id="prod-color-text"></span></div>
+
+				<div class="size-picker">
+					<span class="sz template">
+						<span data-var="text"></span>
+					</span>
+				</div>
+				<div class="info" style="color: #4b851d">In Stock</div>
+				<div class="quantity-selector">
+					<button class="ctrl" data-function="sub">-</button>
+					<input type="text" id="quantity-field" value="1" />
+					<button class="ctrl" data-function="add">+</button>
+				</div>
+
+				<div class="button-set">
+					<button id="add-to-cart-btn">Add to cart</button>
+				</div>
+			</div>
+		</main>
+		<div class="overlay"></div>
+		<aside  class="mini-cart">
+			<div class="head primary-background">Item added to Cart</div>
+			<div class="body">
+				<div class="item-wrap primary--text">
+					<div class="img"></div>
+					<div>
+						<h3 data-var="name" class="item-name"></h3>
+						<h3>
+							<span data-var="price.currency"></span>
+							<span data-var="price.amount"></span>
+						</h3>
+						<div class="info">
+							<span data-var="customization.color"></span>&nbsp;/
+							<span data-var="customization.size"></span>
+						</div>
+						<div class="quantity">
+							Quantity:
+							<span data-var="customization.quantity"></span>
+						</div>
+					</div>
+				</div>
+				<div class="info">
+					CART SUBTOTAL:
+					<span style="float: right"> $<b data-var="prod-total"></b> </span>
+				</div>
+				<div class="button-set" style="margin-top: 10%">
+					<a href="cart.html">CHECKOUT</a>
+					<button class="outlined close-cart">Continue shopping</button>
+				</div>
+			</div>
+		</aside>
+		<script type="text/javascript" src="./src/index.js"></script>
+	</body>
+</html>
